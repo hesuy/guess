@@ -22,9 +22,14 @@ body {
 	background:url(../images/order-bg.jpg) top center no-repeat;
 	background-size: 100% 100%;
 }
+#binding{
+	background:url(../images/binding-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+	padding: .2rem .5rem;
+}
 .title{
 	position: relative;
-	font-size: 2em;
+	font-size: 1.8em;
 	text-align: center;
 	margin-bottom: 1rem;
 }
@@ -48,9 +53,31 @@ body {
 .btn-save{
 	width: 1.8rem;
 	height: .7rem;
+	line-height: .7rem;
 	background: url(../images/btn-save.png) center no-repeat;
 	background-size: 100%;
 	text-indent: -999px;
+}
+.btn-binding{
+	display: inline-block;
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	text-align: center;
+	background-color: #eb0e2d;
+	color:#fff;
+}
+.btn-code{
+	-webkit-appearance:none;
+	width: 3rem;
+	height: .5rem;
+	border:0;
+	border-radius: 0;
+	line-height: .5rem;
+	background-color: #eb0e2d;
+	color: #fff;
+	text-align: center;
+	font-size: .8em;
 }
 /*icons*/
 .icon_1{
@@ -86,6 +113,28 @@ body {
 }
 .icon-children{
 	background-position: 0 -4rem;
+}
+.icon_2{
+	display: block;
+	width: .5rem;
+	height: .5rem;
+	background: url(../images/icon-2.png) no-repeat;
+	background-size:.5rem auto;
+}
+.icon_2.icon-mobile{
+	background-position: 0 -.5rem;
+}
+.icon_2.icon-key{
+	background-position: 0 -1rem;
+}
+.icon_2.icon-cake{
+	background-position: 0 -1.5rem;
+}
+.icon_2.icon-sex{
+	background-position: 0 -2rem;
+}
+.icon_2.icon-lang{
+	background-position: 0 -2.5rem;
 }
 /*forms*/
 .form-content{}
@@ -159,13 +208,6 @@ body {
 	background-size: .3rem;
 }
 
-/*#tmallBinding,
-#orders{
-	display: flex;
-	display: -webkit-flex;
-	flex-direction:column;
-	height: 100%;
-}*/
 #orders .form-submit,
 #tmallBinding .form-submit{
 	position: absolute;
@@ -207,6 +249,7 @@ body {
 
 /*layer*/
 #layer{
+	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -217,11 +260,39 @@ body {
 	z-index: 999;
 }
 #layer-wrap{
-	max-height: 90%;
-}
-#layer-content{
-	width: 95%;
-	height: 100%;
+	width: 90%;
 	margin: auto;
 	background-color: #fff;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.layer-content{
+	position: relative;
+	margin: .3rem;
+	padding: .3rem;
+	border:.02rem dashed #3c3c3c;
+	font-size: .8em;
+}
+.close{
+	position: absolute;
+	right: .3rem;	
+	display: inline-block;
+	width: .3rem;
+	height: .3rem;
+	background: url(../images/close.png) center no-repeat;
+	background-size: .3rem;
+}
+.items{
+	margin-top: .5rem;
+}
+.items-title{
+	margin-bottom: .2rem;
+	font-weight: bold;
+	text-align: center;
+}
+#binding .form-content{
+	margin-top: 5rem;
+	background:url(../images/form-bg.png) center no-repeat;
+	background-size: 100% 100%;
+	padding: .5rem;
 }
