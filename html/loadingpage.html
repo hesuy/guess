@@ -15,15 +15,34 @@
     deviceWidth = deviceWidth > 750 ? 750 : deviceWidth;
     document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
     </script>
+    <style>
+
+    
+	@-webkit-keyframes load {
+		0%{
+	        width: 0%;
+	    }
+	    100%{
+	        width:100%;
+	    }
+	}
+	</style>
 </head>
 
 <body>
     <section id="loading" class="container flex-row flex-center">
         <div class="loading-content">
 			<div id="progressBar">
-				<span class="bar1"></span>
-				<span class="bar2"></span>
-				<span class="bar3"></span>
+				<span class="logo"></span>
+				<div class="bar bar1">
+					<span class="progress_1"></span>
+				</div>
+				<div class="bar bar2">
+					<span class="progress_2"></span>
+				</div>
+				<div class="bar bar3">
+					<span class="progress_3"></span>
+				</div>
 			</div>
 		</div>
     </section>
