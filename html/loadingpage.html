@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>loading</title>
+    <meta name="description" content="GUESS">
+    <meta name="keywords" content="GUESS">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    deviceWidth = deviceWidth > 750 ? 750 : deviceWidth;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <section id="loading" class="container flex-row flex-center">
+        <div class="loading-content">
+			<div id="progressBar">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+		</div>
+    </section>
+    <script src="../libs/zepto.min.js"></script>
+</body>
+
+</html>

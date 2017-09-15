@@ -1,8 +1,8 @@
 /**
  *layer
  */
-var layerShow = function(){
-	var _obj = $(this).data('id');
+var layerShow = function(obj){
+	var _obj = obj;
 	var $layer = $('#layer');
 	var $content = $('#layer-wrap');
 	var $text = $(_obj).text();
@@ -16,7 +16,7 @@ var layerShow = function(){
 			'height':setHeight,
 			'margin-top':setMargin
 		});
-	$(document).on('click', '.close', function(event) {
+	$(document).on('click', '.close,.layer-close', function(event) {
 		event.preventDefault();
 		$content.html('');
 		$layer.hide();

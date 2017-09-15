@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="format-detection" content="telephone=no">
-<title>GUESS</title>
+<title>绑定</title>
 <meta name="description" content="GUESS">
 <meta name="keywords" content="GUESS">
 <link rel="stylesheet" href="../css/main.min.css">
@@ -63,10 +63,10 @@
 				
 				<div class="form-group">
 					<label class="align-self"><input type="checkbox" class="form-checkbox" name=""></label>
-					<span class="small">我已阅读<a href="javascript:;" data-id="#service-items" class="layer-items red underline">服务条款</a>并遵守相关条款。同意接受GUESS的最新资讯和优惠活动。</span>
+					<span class="small">我已阅读<a href="javascript:;" class="layer-items red underline">服务条款</a>并遵守相关条款。同意接受GUESS的最新资讯和优惠活动。</span>
 				</div>
 				<div class="form-submit text-right">
-					<a href="javascript:void(0);" class="btn btn-binding">绑定</a>
+					<a href="javascript:void(0);" id="btn-binding" class="btn btn-binding">绑定</a>
 				</div>
 			</form>
 		</div>
@@ -79,6 +79,9 @@
 	<script id="error-msg" type="text/template">
 		<div class="layer-content">
 			<p class="text-center">对不起，您输入的验证码有误<br/>请重新输入！</p>
+			<div class="text-center mt20">
+			<a href="javascript:;" class="btn btn-save layer-close"></a>
+			</div>
 		</div>
 	</script>
 	<script id="service-items" type="text/template">
@@ -96,7 +99,13 @@
 	<script src="../libs/zepto.min.js"></script>
 	<script src="../js/main.min.js"></script>
 	<script>
-	$('.layer-items').on('click', layerShow);
+	$('.layer-items').on('click',function(){
+		 layerShow($('#service-items'));
+	});
+	$('#btn-binding').on('click', function(event) {
+		event.preventDefault();
+		layerShow($('#error-msg'));
+	});
 	</script>
 </body>
 </html>

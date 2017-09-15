@@ -151,6 +151,9 @@ body .fn-hide {
 .small{
 	font-size: .8em;
 }
+.strong{
+	font-weight: bold;
+}
 .red{
 	color: #fb092a;
 }

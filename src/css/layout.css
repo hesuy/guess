@@ -4,6 +4,7 @@ body {
 .container {
 	position: relative;
 	width: 100%;
+	min-height: 100%;
 	padding: .9rem;
 	color: #000;
 	overflow: hidden;
@@ -24,8 +25,12 @@ body {
 }
 #binding{
 	background:url(../images/binding-bg.jpg) top center no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	padding: .2rem .5rem;
+}
+#points{
+	background:url(../images/points-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
 }
 .title{
 	position: relative;
@@ -58,6 +63,14 @@ body {
 	background-size: 100%;
 	text-indent: -999px;
 }
+.btn-confirm{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-confirm.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
 .btn-binding{
 	display: inline-block;
 	width: 1.8rem;
@@ -70,10 +83,10 @@ body {
 .btn-code{
 	-webkit-appearance:none;
 	width: 3rem;
-	height: .5rem;
+	height: .55rem;
 	border:0;
 	border-radius: 0;
-	line-height: .5rem;
+	line-height: .55rem;
 	background-color: #eb0e2d;
 	color: #fff;
 	text-align: center;
@@ -120,6 +133,9 @@ body {
 	height: .5rem;
 	background: url(../images/icon-2.png) no-repeat;
 	background-size:.5rem auto;
+}
+.icon_2.icon-diamond{
+	background-position: 0 .05rem;
 }
 .icon_2.icon-mobile{
 	background-position: 0 -.5rem;
@@ -296,3 +312,159 @@ body {
 	background-size: 100% 100%;
 	padding: .5rem;
 }
+.gift-items{
+	margin-top: .7rem;
+}
+.gift-items div:nth-child(even){
+	margin-left: 8%;
+}
+.box{
+	position: relative;
+	width: 46%;
+	height: 3rem;
+	background-color: #eee;
+	margin-bottom: .4rem;
+}
+.box-banner{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: .65rem;
+	line-height: .65rem;
+	text-align: center;
+	background: url(../images/banner-bg.png) center no-repeat;
+	background-size: cover;
+	color: #fff;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+/**
+ * progressBar
+ */
+#progressBar{
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	background: url(../images/logo.png) center no-repeat;
+	background-size: 2rem;
+}
+.bar1{
+	position: absolute;
+	display: block;
+	width: 2.4rem;
+	height: .15rem;
+	background-color:#eb0e2d;
+}
+.bar3{
+	position: absolute;
+	top: 0;
+	display: block;
+	margin-top: -.15rem;
+	height: 2.4rem;
+	width: .15rem;
+	background-color:#eb0e2d;
+	transform:rotate(-34deg);
+}
+.bar2{
+	position: absolute;
+	right: 0;
+	display: block;
+	height: 2.4rem;
+	width: .15rem;
+	background-color:#eb0e2d;
+	transform: rotate(34deg);
+}
+.bar1:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -.15rem;
+	width: 0;
+	height: 0;
+	border-width: .15rem .15rem .16rem 0;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}
+.bar1:after{
+	content: '';
+	position: absolute;
+	top: -.15rem;
+	right: -1px;
+	width: 0;
+	height: 0;
+	border-width: .15rem 0 .16rem .15rem;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}
+.bar2:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: -1px;
+	width: 0;
+	height: 0;
+	border-width: .15rem .15rem 0 .15rem;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+}
+.bar2:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-width: 0 .15rem .15rem .16rem;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+}
+.bar3:before{
+	content: '';
+	position: absolute;
+	top: -1px;
+	width: 0;
+	height: 0;
+	border-width: .16rem 0 .15rem .16rem;
+	border-style: solid;
+	border-color: #fff transparent transparent transparent;
+}
+.bar3:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: -1px;
+	width: 0;
+	height: 0;
+	border-width: .15rem 0 .16rem .15rem;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}
+    @-webkit-keyframes load_1 {
+        0%,
+        66.66% {
+            background: #eb0e2d;
+        }
+        100% {
+            background: green;
+        }
+    }
+@-webkit-keyframes load_2 {
+        0%,
+        83.34% {
+            background: #eb0e2d;
+        }
+        100% {
+            background: green;
+        }
+    }
+
+    @-webkit-keyframes load_3 {
+        0%,
+        88.88% {
+            background: #eb0e2d;
+        }
+        100% {
+            background: green;
+        }
+    }
