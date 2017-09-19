@@ -22,7 +22,7 @@
 				<div class="form-group">
 					<label><i class="icon_2 icon-mobile"></i></label>
 					<div class="form-control">
-						<input id="mobile" type="tel" class="form-input" value="" placeholder="请输入联系电话（必填）" maxlength="11" required>
+						<input id="mobile" type="tel" class="form-input error" value="" placeholder="请输入联系电话（必填）" maxlength="11" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -96,14 +96,14 @@
 			</div>
 		</div>
 	</script>
-	<script src="../libs/zepto.min.js"></script>
+	<script src="../libs/jquery.min.js"></script>
 	<script src="../js/main.min.js"></script>
 	<script>
+	//服务条款
 	$('.layer-items').on('click',function(){
 		 layerShow($('#service-items'));
 	});
 	$('#btn-binding').on('click', function(event) {
-		event.preventDefault();
 		layerShow($('#error-msg'));
 	});
 	</script>

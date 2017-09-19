@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>恭喜你</title>
+    <meta name="description" content="GUESS">
+    <meta name="keywords" content="GUESS">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    deviceWidth = deviceWidth > 750 ? 750 : deviceWidth;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
+</head>
+
+<body>
+    <section id="success" class="container">
+        <div class="succ-logo text-center">
+            <img src="../images/logo.png" alt="">
+        </div>
+        <div class="succ-words text-center">
+            <p class="strong fsize mb10">恭喜你</p>
+            <p>你已经成为<strong>GUESS</strong>会员啦！<br/>现在完善个人信息<br/>将获得额外好礼</p>
+        </div>
+        <div class="succ-btn text-center">
+            <a href="javascript:void(0);" class="btn btn-yes">好的</a>
+            <a href="javascript:void(0);" class="btn btn-no">不，谢谢</a>
+        </div>
+    </section>
+    <script src="../libs/jquery.min.js"></script>
+</body>
+
+</html>

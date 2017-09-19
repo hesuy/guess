@@ -153,6 +153,7 @@ body .fn-hide {
 }
 .strong{
 	font-weight: bold;
+	font-size: 1.2em;
 }
 .red{
 	color: #fb092a;
@@ -201,6 +202,9 @@ body .fn-hide {
 .pb15{padding-bottom: 15px;}
 .pb20{padding-bottom: 20px;}
 
+body{
+	font-size: 16px;
+}
 /*自适应屏幕字体大小设置*/
 @media screen and (min-width: 400px){
 	body{
@@ -247,8 +251,20 @@ body {
 	background-size: cover;
 	padding: .2rem .5rem;
 }
+#gift{
+	background:url(../images/gift-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
 #points{
 	background:url(../images/points-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
+#coupon{
+	background:url(../images/coupon-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
+#success{
+	background:url(../images/success-bg.jpg) top center no-repeat;
 	background-size: 100% 100%;
 }
 .title{
@@ -287,6 +303,30 @@ body {
 	height: .7rem;
 	line-height: .7rem;
 	background: url(../images/btn-confirm.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.btn-change{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-change.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.btn-yes{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-yes.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.btn-no{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-no.png) center no-repeat;
 	background-size: 100%;
 	text-indent: -999px;
 }
@@ -413,6 +453,12 @@ body {
 	    flex-wrap:wrap;
 
 }
+.flex-center{
+	-ms-flex-pack: center;
+	    justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
 .align-self{
 	-ms-flex-item-align:start;
 	    align-self:flex-start;
@@ -426,6 +472,9 @@ body {
 	padding: 4px 5px;
 	background: transparent;
 }
+.form-input.error::-webkit-input-placeholder{
+	color: #eb0e2d;
+}
 .control-select{
 	width: 100%;
 	padding-bottom: 8px;
@@ -435,7 +484,7 @@ body {
 	width: 100%;
 	padding: 0 10px;
 	border: 0;
-	box-shadow: inset 2px 2px 10px 5px #dcdcdc;
+	/*box-shadow: inset 2px 0px 15px 5px #dcdcdc;*/
 	background: transparent;
 }
 .form-checkbox{
@@ -452,7 +501,8 @@ body {
 }
 
 #orders .form-submit,
-#tmallBinding .form-submit{
+#tmallBinding .form-submit,
+#points .form-submit{
 	position: absolute;
 	bottom: 1rem;
 	left: 0;
@@ -460,7 +510,11 @@ body {
 	margin-top: 5.6rem;
 	padding-bottom: 1rem;
 }
-.table{}
+.table{
+	max-height: 6rem;
+	overflow: hidden;
+	overflow-y:scroll; 
+}
 .tab-head{
 	margin-bottom: .2rem;
 }
@@ -487,7 +541,7 @@ body {
 }
 .row:nth-child(2),
 .row:nth-child(3){
-	width:35%;
+	width:30%;
 }
 
 /*layer*/
@@ -540,7 +594,6 @@ body {
 	padding: .5rem;
 }
 .gift-items{
-	margin-top: .7rem;
 }
 .gift-items div:nth-child(even){
 	margin-left: 8%;
@@ -569,15 +622,13 @@ body {
 /**
  * progressBar
  */
+.box-img>img{
+	width: 2.1rem;
+}
 #progressBar{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	position: relative;
 	width: 2.1rem;
 	height: 2.1rem;
-	margin: auto;
 }
 .logo{
 	position: absolute;
@@ -589,7 +640,7 @@ body {
 	display: block;
 	width: 1.8rem;
 	height: 1.8rem;
-	background:#fff url(../images/logo.png) center no-repeat;
+	background:#fff url(../images/loading-logo.png) center no-repeat;
 	background-size: 1.8rem;
 }
 .bar{
@@ -598,6 +649,7 @@ body {
 
 }
 .bar1{
+	top: 0;
 	left: -.4rem;
 	display: block;
 	width: 2.75rem;
@@ -605,19 +657,19 @@ body {
 }
 .bar2,
 .bar3{
-	/*height: 2.7rem;
-	width: .15rem;*/
 	width: 2.7rem;
 	height: .15rem;
 	top: 1.13rem;
 }
 .bar2{
 	right: -.91rem;
-	transform: rotate(-60deg);
+	transform: rotate(122deg);
+	-webkit-transform: rotate(122deg);
 }
 .bar3{
 	left: -1.05rem;
-	transform:rotate(60deg);
+	transform:rotate(-120deg);
+	-webkit-transform:rotate(-120deg);
 }
 .bar>span{
 	position: absolute;
@@ -627,16 +679,62 @@ body {
 	left: 0;
 	display: inline-block;
 }
-.progress_1{
-	background: #eb0e2d;
-	animation:load 2s infinite;
-}
-.progress_2{
-	background: #eb0e2d;
-	animation:load 2s infinite;
-}
+.progress_1,
+.progress_2,
 .progress_3{
 	background: #eb0e2d;
-	animation:load 2s infinite;
+	/*animation:load 2s ease-in;*/
+	width: 0;
+}
+#loadingFail{
+	display: none;
 }
 
+.points-total{
+	margin-bottom: .7rem;
+}
+.coupon-list{}
+.coupon-list>dd+dd{
+	margin-top: .25rem;
+}
+.coupon-item{
+	display: table;
+	width: 100%;
+	background: url(../images/coupon-item-bg.png)center no-repeat;
+	background-size: 100% 100%;
+}
+.coupon-item>div{
+	display: table-cell;
+	vertical-align: middle;
+}
+.coupon-rmb{
+	position: relative;
+	width: 1.8rem;
+	text-align: center;
+	font-size: 3em;
+	color: #ec0928;
+}
+.coupon-rmb:after{
+	content: '￥';
+	position: absolute;
+	right: .08rem;
+	top: .15rem;
+	font-size: 14px;
+}
+.coupon-content{
+	padding: .2rem;
+	font-size: .6em;
+}
+.fsize{
+	font-size: 2em;
+}
+.succ-logo>img{
+	width: 2.1rem;
+	margin: 1.2rem auto;
+}
+.succ-words{
+	line-height: 2;
+}
+.succ-btn{
+	margin-top: 1.2rem;
+}

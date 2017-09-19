@@ -15,38 +15,63 @@
     deviceWidth = deviceWidth > 750 ? 750 : deviceWidth;
     document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
     </script>
-    <style>
-
-    
-	@-webkit-keyframes load {
-		0%{
-	        width: 0%;
-	    }
-	    100%{
-	        width:100%;
-	    }
-	}
-	</style>
 </head>
 
 <body>
     <section id="loading" class="container flex-row flex-center">
         <div class="loading-content">
-			<div id="progressBar">
-				<span class="logo"></span>
-				<div class="bar bar1">
-					<span class="progress_1"></span>
-				</div>
-				<div class="bar bar2">
-					<span class="progress_2"></span>
-				</div>
-				<div class="bar bar3">
-					<span class="progress_3"></span>
-				</div>
-			</div>
-		</div>
+            <div id="progressBar">
+                <span class="logo"></span>
+                <div class="bar bar1">
+                    <span class="progress_1"></span>
+                </div>
+                <div class="bar bar2">
+                    <span class="progress_2"></span>
+                </div>
+                <div class="bar bar3">
+                    <span class="progress_3"></span>
+                </div>
+            </div>
+        </div>
+        <div id="loadingFail" class="text-center">
+                <div class="box-img">
+                    <img src="../images/error.png" alt="">
+                </div>
+            	出错了？<br/>那就再来一次！
+            </div>
     </section>
-    <script src="../libs/zepto.min.js"></script>
+    <script src="../libs/jquery.min.js"></script>
+    <script>
+    $(function() {
+        $('.progress_1').animate({
+            'width': '100%'
+        }, 800, function() {
+            step2();
+        });
+        var step2 = function() {
+            $('.progress_2').animate({
+                'width': '100%'
+            }, 1000, function() {
+                step3();
+            });
+        }
+        var step3 = function() {
+        	var timer = 3000;//进度条走完所需时间
+            $('.progress_3').animate({
+                'width': '100%'
+            }, timer, function() {
+            	if(true){
+                	//加载成功
+                    
+            	}else{
+            		//加载失败
+            		$('#loadingFail').show().siblings('.loading-content').hide();
+            	}
+
+            });
+        }
+    });
+    </script>
 </body>
 
 </html>
