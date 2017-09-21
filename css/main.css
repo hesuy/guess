@@ -266,6 +266,7 @@ body {
 #coupon{
 	background:url(../images/coupon-bg.jpg) top center no-repeat;
 	background-size: 100% 100%;
+	padding:.9rem .6rem;
 }
 #success{
 	background:url(../images/success-bg.jpg) top center no-repeat;
@@ -368,7 +369,7 @@ body {
 	display: block;
 	width: .5rem;
 	height: .5rem;
-	margin: auto;
+	/*margin: auto;*/
 	background: url(../images/icon.png) no-repeat;
 	background-size:.5rem auto;
 }
@@ -741,7 +742,7 @@ body {
 }
 .coupon-rmb{
 	position: relative;
-	width: 1.8rem;
+	width: 2rem;
 	text-align: center;
 	font-size: 3em;
 	color: #ec0928;
@@ -901,7 +902,11 @@ body {
 .pos-r{
 	position: relative;
 }
-.pos-a{
+.coupon-num{
+	display: block;
+	width: .5rem;
+	height: .5rem;
+	line-height: .5rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -909,7 +914,7 @@ body {
 	bottom: 0;
 	margin: auto;
 	color: #fff;
-	font-size: 12px;
+	font-size: .8em;
 }
 .activity-list{}
 .activity-list>dt{
@@ -960,4 +965,12 @@ body {
 }
 .active .expand-content{
 	display: block;
+}
+.flex-row>label{
+	-ms-flex-item-align:center;
+	    -ms-grid-row-align:center;
+	    align-self:center;
+}
+#profile .icon{
+	margin: auto;
 }
