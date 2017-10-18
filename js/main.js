@@ -10,6 +10,7 @@ var layerShow = function(obj) {
     $content.html($text);
     var _height = $(window).height();
     var _divHeight = $content.height();
+    console.log(_height,_divHeight);
     var setHeight = _divHeight > (_height - 50) ? _height - 50 : _divHeight;
     var setMargin = _divHeight > (_height - 50) ? 25 : (_height - _divHeight) / 2;
     $content.css({

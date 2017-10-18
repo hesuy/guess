@@ -258,6 +258,7 @@ body {
 #gift{
 	background:url(../images/gift-bg.jpg) top center no-repeat;
 	background-size: 100% 100%;
+	padding: .9rem .6rem;
 }
 #points{
 	background:url(../images/points-bg.jpg) top center no-repeat;
@@ -274,6 +275,14 @@ body {
 }
 #vipInfo{
 	background:url(../images/info-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
+#orderInfo{
+	background: url(../images/order_info-bg.jpg) top center no-repeat;
+	background-size: 100% 100%;
+}
+#giftExchange{
+	background: url(../images/order_info-bg.jpg) top center no-repeat;
 	background-size: 100% 100%;
 }
 #profile{
@@ -364,6 +373,30 @@ body {
 	text-align: center;
 	font-size: .8em;
 }
+.btn-perfect{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-perfect.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.btn-submit_order{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-submit_order.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
+.btn-exchange{
+	width: 1.8rem;
+	height: .7rem;
+	line-height: .7rem;
+	background: url(../images/btn-exchange.png) center no-repeat;
+	background-size: 100%;
+	text-indent: -999px;
+}
 /*icons*/
 .icon{
 	display: block;
@@ -436,6 +469,14 @@ body {
 .icon-bar{
 	background-position: 0 -10rem;
 }
+.icon-right{
+	display: block;
+	width: .5rem;
+	height: .5rem;
+	margin: auto;
+	background: url(../images/icon-right.png) no-repeat;
+	background-size:.5rem auto;
+}
 /*forms*/
 .form-content{}
 .form-group{
@@ -446,6 +487,8 @@ body {
 	    flex-direction:row;
 	-ms-flex-align:center;
 	    align-items:center;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
 	margin-bottom: .45rem;
 }
 .form-group>label{
@@ -553,6 +596,7 @@ body {
 }
 .tab-head .row{
 	font-weight: bold;
+	text-align: center;
 }
 .tab-head,
 .column{
@@ -574,9 +618,21 @@ body {
 }
 .row:nth-child(2),
 .row:nth-child(3){
+	width: 30%;
+}
+#points .row:first-child{
+	text-align: left;
+}
+.row:last-child{
+	text-align: right;
+}
+#points .row:nth-child(1),
+#points .row:nth-child(2){
 	width:30%;
 }
-
+#points .row:nth-child(3){
+	width: 40%;
+}
 /*layer*/
 #layer{
 	display: none;
@@ -602,6 +658,10 @@ body {
 	padding: .3rem;
 	border:.02rem dashed #3c3c3c;
 	font-size: .8em;
+}
+.notice{
+	border: .2rem solid #000;
+	margin: 0;
 }
 .close{
 	position: absolute;
@@ -651,6 +711,7 @@ body {
 	color: #fff;
 	overflow: hidden;
 	text-overflow:ellipsis;
+	font-size: .8em;
 }
 /**
  * progressBar
@@ -926,7 +987,7 @@ body {
 }
 .activity-list>dd{
 	position: relative;
-	padding: .4rem 0 .4rem .4rem;
+	padding: .4rem 0 .4rem 0rem;
 }
 .activity-list>dd:before{
 	content: '';
@@ -959,6 +1020,7 @@ body {
 	display: block;
 	color: #000;
 	cursor: pointer;
+	padding-left: .4rem;
 }
 .expand-content{
 	display: none;
@@ -973,4 +1035,99 @@ body {
 }
 #profile .icon{
 	margin: auto;
+}
+.qrcode{
+	padding:.5rem;
+}
+.qrcode>img{
+	width: 4rem;
+	height: 4rem;
+}
+.tab-container{
+	margin: .2rem;
+	border:.05rem solid #000;
+	border-radius: 0;
+}
+.tab-caption{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.tab-caption>a{
+	display: table-cell;
+	width: 1%;
+	text-align: center;
+	padding: .1rem .2rem .2rem;
+}
+.tab-caption .white{
+	color: #000;
+	background-color: #fff;
+}
+.tab-caption .red{
+	color: #fff;
+	background-color: #d13535;
+}
+.tab-caption .black{
+	color: #fff;
+	background-color: #000;
+}
+.tab-content{
+	display: none;
+	margin: .2rem;
+	border:.02rem solid #000;
+	border-radius: 0;
+	font-size: .8em;
+}
+.tab-content.active{
+	display: block;
+}
+.tab-content .column{
+	border-bottom: 0;
+	padding:0;
+	font-size: 1em;
+}
+.tab-content .column+.column{
+	border-top:.02rem solid #000;
+}
+.tab-content .column>span{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding:.3rem .1rem;
+
+}
+.tab-content .column>span:first-child{
+	width: 32%;
+}
+.tab-content .column>span+span{
+	border-left: .02rem solid #000;
+}
+
+/*form reset*/
+.form-group.reset{}
+.form-group.reset>label{
+
+}
+.reset .form-control{
+	width: 3.6rem;
+	border: 0;
+}
+.reset .form-input,
+.reset select{
+	border: .02px solid #000;
+	border-radius: 0;
+}
+.form-textarea{
+	border: .02rem solid #000;
+	border-radius: 0;
+	height: 2rem;
+	resize:none;
+}
+.reset>.form-control-select>.control-select>select{
+	width: 70%;
+	margin-right: 5px;
+}
+.gift-logo{
+	width: 2rem;
+	margin:auto;
 }
