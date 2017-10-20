@@ -118,7 +118,15 @@
 			<div id="layer-content"></div>
 		</div>
 	</div>
-	
+	<!-- 获得优惠券 -->
+	<script id="get-coupon" type="text/template">
+		<div class="layer-content notice">
+			<p class="text-center m20">感谢支持！<br/>您已获得20元优惠券，请至会员中心查看。</p>
+			<div class="text-center mt20">
+			<a href="javascript:;" class="btn btn-confirm layer-close"></a>
+			</div>
+		</div>
+	</script>
 	<script id="vip-items" type="text/template">
 		<div class="layer-content">
 			<span class="close"></span>
@@ -136,6 +144,9 @@
 	<script>
 	$('.layer-items').on('click', function(){
 		layerShow($('#vip-items'));
+	});
+	$('.btn-save').on('click', function(){
+		layerShow($('#get-coupon'));
 	});
 	</script>
 </body>

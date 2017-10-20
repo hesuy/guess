@@ -24,6 +24,7 @@
                 <div class="user-gravatar">
                     <span class="img-border"><img src="../images/user-img.png" alt=""></span>
                     <a href="javascript:;" class="btn-edit">编辑</a>
+                    <input type="file" class="upload" />
                 </div>
                 <div class="mt10 text-center">疯子LUKE</div>
             </div>
@@ -69,13 +70,13 @@
                     <dd class="active">
                         <a href="javascript:void(0);" class="expand">会员权益等级</a>
                         <div class="expand-content">
-                            <div class="tab-container">
+                            <div id="tab-container">
                                 <div class="tab-caption">
                                     <a href="javascript:void(0);" class="white">White普卡</a>
                                     <a href="javascript:void(0);" class="red">Red红卡</a>
                                     <a href="javascript:void(0);" class="black">Black黑卡</a>
                                 </div>
-                                <div class="tab-wrap">
+                                <div id="tab-wrap">
                                     <dl class="tab-content active">
                                         <dd class="column">
                                             <span>入会<br/>及升级条件</span>
@@ -177,9 +178,26 @@
         <div id="layer-wrap">
         </div>
     </div>
+    <!-- 二维码 -->
     <script id="layer-qrcode" type="text/template">
         <div class="layer-content notice">
             <div class="text-center qrcode"><img src="../images/qr-code.png" alt=""></div>
+        </div>
+    </script>
+    <!-- 上传成功 -->
+    <script id="upload-success" type="text/template">
+        <div class="layer-content notice">
+            <p class="text-center m20">上传成功</p>
+            <div class="text-center mt20">
+            <a href="javascript:;" class="btn btn-confirm layer-close"></a>
+        </div>
+    </script>
+    <!-- 上传失败 -->
+    <script id="upload-fail" type="text/template">
+        <div class="layer-content notice">
+            <p class="text-center m20">上传失败，<br/>请重新再试。</p>
+            <div class="text-center mt20">
+            <a href="javascript:;" class="btn btn-confirm layer-close"></a>
         </div>
     </script>
     <script src="../libs/jquery.min.js"></script>
@@ -197,8 +215,10 @@
     //会员权益等级tab切换
     $('.tab-caption>a').on('click', function(event) {
         event.preventDefault();
+        var _color = $(this).attr('class');
         $(this).addClass('active').siblings().removeClass('active');
         var _index = $('.tab-caption>a').index(this);
+        $('#tab-container').removeClass().addClass('bg-'+_color);
         $('.tab-content').eq(_index).addClass('active').siblings().removeClass('active');
     });
     </script>

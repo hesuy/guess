@@ -662,6 +662,7 @@ body {
 .notice{
 	border: .2rem solid #000;
 	margin: 0;
+	font-size: 1em;
 }
 .close{
 	position: absolute;
@@ -1043,7 +1044,7 @@ body {
 	width: 4rem;
 	height: 4rem;
 }
-.tab-container{
+#tab-container{
 	margin: .2rem;
 	border:.05rem solid #000;
 	border-radius: 0;
@@ -1077,6 +1078,7 @@ body {
 	border:.02rem solid #000;
 	border-radius: 0;
 	font-size: .8em;
+	background-color: #fff;
 }
 .tab-content.active{
 	display: block;
@@ -1130,4 +1132,60 @@ body {
 .gift-logo{
 	width: 2rem;
 	margin:auto;
+}
+.pro-img{
+	border:.1rem solid #000;
+	border-radius: .1rem;
+	height: 2.8rem;
+	background-color: #fff;
+	padding:0 1.2rem;
+}
+.product-info{
+	padding:.6rem .3rem;
+	font-weight: bold;
+}
+.product-info .line{
+	border-bottom: .02rem dashed #3c3c3c;
+	padding-bottom:.8rem;
+	margin-bottom:.8rem;
+}
+.msg-box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
+	width: 5.2rem;
+	height: 2.6rem;
+	padding:.2rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+	background-color: #fff;
+	border:.1rem solid #000;
+	border-radius: .1rem;
+
+}
+.upload{
+	position: absolute;
+    bottom: 0;
+    right: -.15rem;
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    text-indent: -999px;
+    z-index: 9;
+}
+.bg-red{
+	background-color: #d13535;
+}
+.bg-white{
+	background-color: #fff;
+}
+.bg-black{
+	background-color: #000;
 }
