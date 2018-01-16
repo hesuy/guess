@@ -3,35 +3,39 @@
  */
 var layerShow = function(obj) {
     var _obj = obj;
-    var $layer = $('#layer');
-    var $content = $('#layer-wrap');
+    var $body = $('body');
+    var $layer = $('<div id ="layer"></div>');
+    var $wrap = $('<div id="layer-wrap"></div>');
+    var $close = $('<span class="close"></span>');
+    var $content = $('<div id="layer-content"></div>');
+    $wrap.append($close);
+    $wrap.append($content);
+    $layer.append($wrap);
+    $body.append($layer);
     var $text = $(_obj).text();
-    $layer.show();
     $content.html($text);
-    var _height = $(window).height();
-    var _divHeight = $content.height();
-    console.log(_height,_divHeight);
-    var setHeight = _divHeight > (_height - 50) ? _height - 50 : _divHeight;
-    var setMargin = _divHeight > (_height - 50) ? 25 : (_height - _divHeight) / 2;
-    $content.css({
-        'height': setHeight,
-        'margin-top': setMargin
-    });
-    $(document).on('click', '.close,.layer-close', function(event) {
+    $layer.show();
+    // var _height = $(window).height();
+    // var _divHeight = $wrap.height();
+    // console.log(_height,_divHeight);
+    // var setHeight = _divHeight > (_height - 50) ? _height - 50 : _divHeight;
+    // var setMargin = _divHeight > (_height - 50) ? 25 : (_height - _divHeight) / 2;
+    // $wrap.css({
+    //     'height': setHeight,
+    //     'margin-top': setMargin
+    // });
+    $(document).on('click', '.close', function(event) {
         event.preventDefault();
-        $content.html('');
-        $layer.hide();
+        $wrap.html('');
+        $layer.remove();
     });
 };
 
-/**
- * change
- */
-
-$('#sex').change(function(event) {
-    if ($(this).val() == '男') {
-        $('#icon-sex').addClass('icon-boy').removeClass('icon-girl');
-    } else {
-        $('#icon-sex').addClass('icon-girl').removeClass('icon-boy');
-    }
-});
+    //radio-checked
+    $(document).on('click', '.spn-radio', function(event) {
+        event.stopPropagation();
+        var $this = $(this);
+        $this.addClass('checked').siblings().removeClass('checked');
+        $this.siblings().find('input').attr('checked', false);
+        $this.find('input').attr('checked', true);
+    });
