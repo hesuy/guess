@@ -24,7 +24,7 @@ var layerShow = function(obj) {
     //     'height': setHeight,
     //     'margin-top': setMargin
     // });
-    $(document).on('click', '.close', function(event) {
+    $(document).on('touchend', '.close', function(event) {
         event.preventDefault();
         $wrap.html('');
         $layer.remove();
@@ -32,7 +32,7 @@ var layerShow = function(obj) {
 };
 
     //radio-checked
-    $(document).on('click', '.spn-radio', function(event) {
+    $(document).on('touchend', '.spn-radio', function(event) {
         event.stopPropagation();
         var $this = $(this);
         $this.addClass('checked').siblings().removeClass('checked');

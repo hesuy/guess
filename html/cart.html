@@ -68,7 +68,7 @@
                     		<div class="operation">
                     			<a href="javascript:;" class="add" data-max="5">+</a>
                     			<input type="number" class="operation-num" value="1" />
-                    			<a href="javascript:;" class="subtract" data-min = "0">-</a>
+                    			<a href="javascript:;" class="subtract" data-min = "1">-</a>
                     		</div>
                     		<a href="javascript:;" class="delete hide">
                     			<i class="icon icon-delete"></i>
@@ -98,14 +98,16 @@
     <script src="../libs/zepto.min.js"></script>
     <script src="../js/main.min.js"></script>
     <script type="text/javascript">
-    	$(document).on('touchmove', '.pro-box', function(event) {
+    	$(document).on('touchend', '.pro-box', function(event) {
+            event.preventDefault();
     		var $this = $(this);
     		var $delete = $this.find('.delete');
     		$delete[$delete.hasClass('hide') ? 'removeClass':'addClass']('hide');
     	});
 
-    	$('.operation>a').on('click', function(event) {
+    	$('.operation>a').on('touchend', function(event) {
     		event.preventDefault();
+            event.stopPropagation();
     		var $this = $(this);
     		var $operationNum = $this.siblings('.operation-num');
     		var _num = $operationNum.val();
