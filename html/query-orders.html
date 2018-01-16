@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<title>订单查询</title>
+<meta name="description" content="GUESS">
+<meta name="keywords" content="GUESS">
+<link rel="stylesheet" href="../css/main.min.css">
+<script>
+	var deviceWidth = document.documentElement.clientWidth;
+	deviceWidth = deviceWidth >750 ? 750 : deviceWidth;
+	document.documentElement.style.fontSize = deviceWidth/7.5 +'px';
+</script>
+</head>
+<body>
+	<section class="container bg-6">
+		 <div class="wrapper">
+            <a href="" class="back"></a>
+            <div class="logo-wh mb-reset"><img src="../images/logo-wh.png"></div>
+            <a href="" class="connect-us">
+            	<i class="icon-ask"></i>
+            	<p class="small">联系品牌</p>
+            </a>
+            <div class="title">订单查询</div>
+			<div class="content">
+				<div class="tabs">
+					<a href="#" class="tab-cell">产品购买记录</a>
+					<a href="#" class="tab-cell active">积分兑换查询</a>
+				</div>
+				<div class="tab-content">
+					<dl class="list">
+						<dt>现有积分：2000分</dt>
+						<dd class="list-item">
+							<a href="javascript:;" class="expand active">
+								<span>兑换日期：2017-12-01</span>
+								<i class="triangle"></i>
+							</a>
+							<div class="expand-content">
+								<dl>
+									<dd class="flex flex-between align-center">
+										<div class="pro-img">
+											<img src="../images/pro-img.jpg">
+										</div>
+										<div class="pro-info ml10">
+											<p>积分换礼：时尚帆布袋</p>
+											<p>使用积分：3500</p>
+											<p>兑换数量：1</p>
+											<p class="mb0">快递单号：28478589999 </p>
+										</div>
+									</dd>
+									<dd class="flex flex-between align-center">
+										<div class="pro-img">
+											<img src="../images/pro-img.jpg">
+										</div>
+										<div class="pro-info ml10">
+											<p>积分换礼：时尚帆布袋</p>
+											<p>使用积分：3500</p>
+											<p>兑换数量：1</p>
+											<p class="mb0">快递单号：28478589999 </p>
+										</div>
+									</dd>
+								</dl>
+								<p class="text-right mt10">总计积分：7000</p>
+							</div>
+						</dd>
+						<dd class="list-item">
+							<a href="javascript:;" class="expand">
+								<span>兑换日期：2017-12-01</span>
+								<i class="triangle"></i>
+							</a>
+							<div class="expand-content">
+								<dl>
+									<dd class="flex flex-between align-center">
+										<div class="pro-img">
+											<img src="../images/pro-img.jpg">
+										</div>
+										<div class="pro-info ml10">
+											<p>积分换礼：时尚帆布袋</p>
+											<p>使用积分：3500</p>
+											<p>兑换数量：1</p>
+											<p class="mb0">快递单号：28478589999 </p>
+										</div>
+									</dd>
+									<dd class="flex flex-between align-center">
+										<div class="pro-img">
+											<img src="../images/pro-img.jpg">
+										</div>
+										<div class="pro-info ml10">
+											<p>积分换礼：时尚帆布袋</p>
+											<p>使用积分：3500</p>
+											<p>兑换数量：1</p>
+											<p class="mb0">快递单号：28478589999 </p>
+										</div>
+									</dd>
+								</dl>
+								<p class="text-right mt10">总计积分：7000</p>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="../libs/zepto.min.js"></script>
+	<script type="text/javascript">
+    //展开列表
+    $(document).on('click','.expand',function(){
+        var $this = $(this);
+        $this[$this.hasClass('active') ? 'removeClass' : 'addClass']('active');
+    });
+	</script>
+</body>
+</html>

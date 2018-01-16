@@ -16,11 +16,11 @@
 </script>
 </head>
 <body>
-	<section id="tmallBinding" class="container flex-column">
-		<div class="title">
-			<span>天猫账号绑定</span>
-		</div>
-		<div class="form-content">
+	<section class="container bg-7">
+		<div class="wrapper">
+		 <div class="logo-wh mb-reset"><img src="../images/logo-red.png"></div>
+            <div class="title">天猫账号绑定</div>
+            <div class="form-content bg-white">
 			<form id="myForm" class="forms" action="">
 				<div class="form-group">
 					<label><i class="icon icon-tmall"></i></label>
@@ -35,11 +35,24 @@
 					</div>
 				</div>
 				<div class="form-submit text-center">
-					<a href="javascript:void(0);" class="btn btn-save">保存</a>
+					<a href="javascript:void(0);" id="btn-save" class="btn btn-half btn-abled">保存</a>
 				</div>
 			</form>
 		</div>
+		</div>
 	</section>
-	<script src="../libs/jquery.min.js"></script>
+	<!-- 成功 -->
+	<script id="msg" type="text/template">
+		<div class="layer-content">
+			<p class="text-center large m20">绑定成功！</p>
+		</div>
+	</script>
+	<script src="../libs/zepto.min.js"></script>
+	<script src="../js/main.min.js"></script>
+	<script type="text/javascript">
+		$('#btn-save').on('click',function(event) {
+			layerShow($('#msg'));
+		});
+	</script>
 </body>
 </html>

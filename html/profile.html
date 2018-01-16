@@ -9,6 +9,7 @@
     <title>个人中心</title>
     <meta name="description" content="GUESS">
     <meta name="keywords" content="GUESS">
+    <link rel="stylesheet" href="../libs/swiper/swiper.min.css">
     <link rel="stylesheet" href="../css/main.min.css">
     <script>
     var deviceWidth = document.documentElement.clientWidth;
@@ -18,208 +19,305 @@
 </head>
 
 <body>
-    <section id="profile" class="container">
-        <div class="profile-header">
-            <div class="user-info">
-                <div class="user-gravatar">
-                    <span class="img-border"><img src="../images/user-img.png" alt=""></span>
-                    <a href="javascript:;" class="btn-edit">编辑</a>
-                    <input type="file" class="upload" />
-                </div>
-                <div class="mt10 text-center">疯子LUKE</div>
+    <section class="container bg-9">
+        <div class="wrapper wrapper-padding-reset">
+            <div class="logo-wh mb-reset"><img src="../images/logo-wh.png"></div>
+            <div class="user">
+                <p class="large">海莉</p>
+                <p class="small">VIP红卡<span class="underline ml10">3689</span></p>
             </div>
-            <div class="word-img"><img src="../images/words-img.png" alt=""></div>
-        </div>
-        <div class="profile-wrap">
-            <div class="profile-items">
-                <div class="title-logo"><img src="../images/logo-w.png" alt=""></div>
-                <dl class="items-table">
-                    <dd class="item-row">
-                        <div class="item-column">
-                            <span>10000</span>
-                            <span>积分与兑换</span>
+            <div class="profile-wrap">
+                <div class="profile-head">
+                    <div class="user-box">
+                        <div class="head-img">
+                            <img src="../images/head-img.png">
                         </div>
-                        <div class="item-column">
-                            <span></span>
-                            <span>会员档案</span>
-                        </div>
-                        <div class="item-column">
-                            <div class="pos-r">
-                                <i class="icon icon-coupon"></i>
-                                <span class="coupon-num">2</span>
-                            </div>
-                            <span>优惠券</span>
-                        </div>
-                        <dd class="item-row">
-                            <div class="item-column">
-                                <span><i class="icon icon-tmall"></i></span>
-                                <span>天猫账号</span>
-                            </div>
-                            <div id="qrCode" class="item-column">
-                                <span><i class="icon icon-bar"></i></span>
-                                <span>二维码</span>
-                            </div>
-                            <div class="item-column">
-                                <span><i class="icon icon-order"></i></span>
-                                <span>订单查询</span>
-                            </div>
-                        </dd>
-                </dl>
-                <dl class="activity-list">
-                    <dt>会员活动</dt>
-                    <dd class="active">
-                        <a href="javascript:void(0);" class="expand">会员权益等级</a>
-                        <div class="expand-content">
-                            <div id="tab-container">
-                                <div class="tab-caption">
-                                    <a href="javascript:void(0);" class="white">White普卡</a>
-                                    <a href="javascript:void(0);" class="red">Red红卡</a>
-                                    <a href="javascript:void(0);" class="black">Black黑卡</a>
+                        <a href="javascript:;" class="btn-add">+</a>
+                    </div>
+                </div>
+                <div class="profile-content">
+                    <!-- part1 -->
+                    <div class="part part1">
+                        <div class="progress-level">
+                            <div class="level-title">
+                                <div class="level-tips level-tips_b">
+                                    <span>VIP黑卡</span>
+                                    <span>6000</span>
                                 </div>
-                                <div id="tab-wrap">
-                                    <dl class="tab-content active">
-                                        <dd class="column">
-                                            <span>入会<br/>及升级条件</span>
-                                            <span>注册或任意店内消费</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>欢迎礼包</span>
-                                            <span>100元优惠券;<br/>单笔购满699元可使用;<br/>有效期1个月。</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>生日臻礼 </span>
-                                            <span>生日当月可领100元优惠券；<br/>单笔购满399元即可使用；<br/> 生日月首笔订单享双倍积分。 </span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>会员折扣</span>
-                                            <span></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>消费积分</span>
-                                            <span>￥1 = 1 point</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>互动积分</span>
-                                            <span><i class="icon-right"></i></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>尊享会员活动 与更多惊喜</span>
-                                            <span></span>
-                                        </dd>
-                                    </dl>
-                                    <dl class="tab-content">
-                                        <dd class="column">
-                                            <span>生日臻礼 </span>
-                                            <span>生日当月可领100元优惠券；<br/>单笔购满399元即可使用；<br/> 生日月首笔订单享双倍积分。 </span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>会员折扣</span>
-                                            <span></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>消费积分</span>
-                                            <span>￥1 = 1 point</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>互动积分</span>
-                                            <span><i class="icon-right"></i></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>尊享会员活动 与更多惊喜</span>
-                                            <span></span>
-                                        </dd>
-                                    </dl>
-                                    <dl class="tab-content">
-                                        <dd class="column">
-                                            <span>入会<br/>及升级条件</span>
-                                            <span>注册或任意店内消费</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>欢迎礼包</span>
-                                            <span>100元优惠券;<br/>单笔购满699元可使用;<br/>有效期1个月。</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>生日臻礼 </span>
-                                            <span>生日当月可领100元优惠券；<br/>单笔购满399元即可使用；<br/> 生日月首笔订单享双倍积分。 </span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>会员折扣</span>
-                                            <span></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>消费积分</span>
-                                            <span>￥1 = 1 point</span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>互动积分</span>
-                                            <span><i class="icon-right"></i></span>
-                                        </dd>
-                                        <dd class="column">
-                                            <span>尊享会员活动 与更多惊喜</span>
-                                            <span></span>
-                                        </dd>
-                                    </dl>
+                                <div class="level-tips level-tips_r">
+                                    <span>VIP红卡</span>
+                                    <span>3000</span>
+                                </div>
+                                <div class="level-tips level-tips_w">
+                                    <span>VIP普卡</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <div class="bar"></div>
+                                <div class="progress-bar"></div>
+                                <div class="progress-points">
+                                    <span class="step1"></span>
+                                    <span class="step2"></span>
+                                    <span class="step3"></span>
                                 </div>
                             </div>
                         </div>
-                    </dd>
-                    <dd>
-                        <a href="javascript:void(0);" class="expand">分享赚积分</a>
-                        <div class="expand-content">
-                            <p>成功邀请好友成为会员获200积分；好友使用自由会员转赠的优惠券后，双方还可获300积分。</p>
-                            <p>活动时间：2017.8</p>
+                        <div class="personal-tools">
+                            <dl class="tools-list">
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-change"></span>
+                                    </div>
+                                    <p class="small mt5">积分兑换</p>
+                                </dd>
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-code"></span>
+                                    </div>
+                                    <p class="small mt5">会员条码</p>
+                                </dd>
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-coupon"></span>
+                                    </div>
+                                    <span class="notice">1</span>
+                                    <p class="small mt5">优惠券</p>
+                                </dd>
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-tmall_b"></span>
+                                    </div>
+                                    <p class="small mt5">天猫账号</p>
+                                </dd>
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-orders"></span>
+                                    </div>
+                                    <p class="small mt5">订单查询</p>
+                                </dd>
+                                <dd>
+                                    <div class="border p10">
+                                        <span class="tools-icon icon-home"></span>
+                                    </div>
+                                    <p class="small mt5">附近店铺</p>
+                                </dd>
+                            </dl>
                         </div>
-                    </dd>
-                </dl>
+                    </div>
+                    <!-- part1 end -->
+                    <!-- part2 -->
+                    <div class="part part2 swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-1.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-1.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- part2 end -->
+                    <!-- part3 -->
+                    <div class="part part3 swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-2.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-2.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/swiper-2.png">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- part4 -->
+                    <div class="part4">
+                        <!-- 会员活动 -->
+                        <div class="">
+                            <a href="javascript:void(0);" class="expand expand-banner banner-1">
+                                会员活动
+                            </a>
+                            <dl class="expand-content bg-pink">
+                                <!-- 普卡 -->
+                                <dd>
+                                    <a href="javascript:void(0);" class="expand level-expand">
+                                        <i class="level-icon icon-white"></i>
+                                        <div class="">
+                                            <p>普卡会员</p>
+                                            <p class="small">完成注册，即可成为普卡会员。</p>
+                                        </div>
+                                    </a>
+                                    <dl class="expand-content preferential-list">
+                                        <dd>
+                                            <h3>GUESS WHITE！100元优惠券</h3>
+                                            <p class="mt5 pl10 pr10">适用于GUESS天猫旗舰店或线下指定门店，单笔消费满699元即可使用。有效期自入会日起1个月。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>生日最闪亮！100元优惠券与双倍积分</h3>
+                                            <div class="mt5 pl10 pr10">
+                                                <p>◎适用于GUESS天猫旗舰店或线下指定门店，单笔消费满399元即可使用。</p>
+                                                <p>◎生日当月获赠，当月有效。 </p>
+                                                <p>◎生日月首笔订单享双倍积分</p>
+                                            </div>
+                                        </dd>
+                                        <dd>
+                                            <h3>购物也在“赚”！</h3>
+                                            <p class="mt5 pl10 pr10">◎在指定门店、天猫旗舰店购买商品时，享“1元累计1分”。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>来互动吧！</h3>
+                                            <p class="mt5 pl10 pr10">参与GUESS客户满意度调查、线上官方活动均可累计相关互动积分，互动积分规则详见相关互动的“活动细则”。</p>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                                <!-- 普卡 end -->
+                                <!-- 红卡 -->
+                                <dd>
+                                    <a href="javascript:void(0);" class="expand level-expand">
+                                        <i class="level-icon icon-red"></i>
+                                        <div class="">
+                                            <p>红卡会员</p>
+                                            <p class="small">单笔消费满2000元，或近12个月累计消费满3000元，即可晋升为红卡会员。</p>
+                                        </div>
+                                    </a>
+                                    <dl class="expand-content preferential-list">
+                                        <dd>
+                                            <h3>你最红！100元优惠券</h3>
+                                            <p class="mt5 pl10 pr10">入会或升级为红卡会员时获赠。适用于GUESS天猫旗舰店或线下指定门店，单笔消费满699元即可使用。有效期自入会日起3个月。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>生日最闪亮！100元优惠券与双倍积分</h3>
+                                            <div class="mt5 pl10 pr10">
+                                                <p>◎适用于GUESS天猫旗舰店或线下指定门店，单笔消费满399元即可使用。</p>
+                                                <p>◎生日当月获赠，当月有效。 </p>
+                                                <p>◎生日月首笔订单享双倍积分</p>
+                                            </div>
+                                        </dd>
+                                        <dd>
+                                            <h3>9折尊享！</h3>
+                                            <p class="mt5 pl10 pr10">◎正价商品可享9折优惠。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>购物也在“赚”！</h3>
+                                            <p class="mt5 pl10 pr10">◎在指定门店、天猫旗舰店购买商品时，享“1元累计1分”。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>来互动吧！</h3>
+                                            <p class="mt5 pl10 pr10">参与GUESS客户满意度调查、线上官方活动均可累计相关互动积分，互动积分规则详见相关互动的“活动细则”。</p>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                                <!-- 红卡 end -->
+                                <!-- 红卡 -->
+                                <dd>
+                                    <a href="javascript:void(0);" class="expand level-expand">
+                                        <i class="level-icon icon-black"></i>
+                                        <div class="">
+                                            <p>黑卡会员</p>
+                                            <p class="small">单笔消费满4000元，或近12个月累计消费满6000元，即可晋升为黑卡会员。 </p>
+                                        </div>
+                                    </a>
+                                    <dl class="expand-content preferential-list">
+                                        <dd>
+                                            <h3>尊贵黑！200元优惠券 </h3>
+                                            <p class="mt5 pl10 pr10">入会或升级为黑卡会员时获赠。适用于GUESS天猫旗舰店或线下指定门店，单笔消费满899元即可使用。有效期自入会日起3个月。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>你最闪亮！100元优惠券</h3>
+                                            <div class="mt5 pl10 pr10">
+                                                <p>◎适用于GUESS天猫旗舰店或线下指定门店，单笔消费满399元即可使用。</p>
+                                                <p>◎生日当月获赠，当月有效。 </p>
+                                                <p>◎双倍积分生日月首笔订单享双倍积分。</p>
+                                            </div>
+                                        </dd>
+                                        <dd>
+                                            <h3>9折尊享！</h3>
+                                            <p class="mt5 pl10 pr10">◎正价商品可享9折优惠。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>购物也在“赚”！</h3>
+                                            <p class="mt5 pl10 pr10">◎在指定门店、天猫旗舰店购买商品时，享“1元累计1分”。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>来互动吧！</h3>
+                                            <p class="mt5 pl10 pr10">参与GUESS客户满意度调查、线上官方活动均可累计相关互动积分，互动积分规则详见相关互动的“活动细则”。</p>
+                                        </dd>
+                                        <dd>
+                                            <h3>更多惊喜！</h3>
+                                            <p class="mt5 pl10 pr10">GUESS会不定时为黑卡会员提供专属会员活动，更多惊喜值得期待。</p>
+                                        </dd>
+                                    </dl>
+                                </dd>
+                                <!-- 红卡 end -->
+                            </dl>
+                        </div>
+                        <!-- 会员活动 end -->
+                         <div class="">
+                            <a href="javascript:void(0);" class="expand expand-banner banner-2">
+                                联系我们
+                            </a>
+                             <dl class="expand-content bg-pink">
+                                <dd class="flex flex-row mt5 mb20">
+                                    <i class="connect-icon icon-1"></i>
+                                    <p class="small wth-90 pl10 text-left">GUESS天猫旗舰店咨询及售后问题，请拨打客服电话：400-xxxxxxx  您也可以将问题发送至：xxxxxx@guessa</p>
+                                </dd>
+                                <dd class="flex flex-row mt5">
+                                    <i class="connect-icon icon-2"></i>
+                                    <p class="small wth-90 pl10 text-left">您也可以将问题发送至：<br/>
+                                        xxxxxx@guessasia.com<br/>我们将在7-15个工作日内回复。感谢您对GUESS的理解和支持！</p>
+                                </dd>
+                             </dl>
+                    </div>
+                    <!-- part4 end -->
+                </div>
             </div>
         </div>
     </section>
-    <div id="layer" class="layer-close">
-        <div id="layer-wrap">
-        </div>
-    </div>
-    <!-- 二维码 -->
-    <script id="layer-qrcode" type="text/template">
-        <div class="layer-content notice">
-            <div class="text-center qrcode"><img src="../images/qr-code.png" alt=""></div>
-        </div>
-    </script>
-    <!-- 上传成功 -->
-    <script id="upload-success" type="text/template">
-        <div class="layer-content notice">
-            <p class="text-center m20">上传成功</p>
-            <div class="text-center mt20">
-            <a href="javascript:;" class="btn btn-confirm layer-close"></a>
-        </div>
-    </script>
-    <!-- 上传失败 -->
-    <script id="upload-fail" type="text/template">
-        <div class="layer-content notice">
-            <p class="text-center m20">上传失败，<br/>请重新再试。</p>
-            <div class="text-center mt20">
-            <a href="javascript:;" class="btn btn-confirm layer-close"></a>
-        </div>
-    </script>
-    <script src="../libs/jquery.min.js"></script>
-    <script src="../js/main.min.js"></script>
+    <script src="../libs/zepto.min.js"></script>
+    <script src="../libs/swiper/swiper.min.js"></script>
     <script>
-    $('.expand').on('click', function(event) {
-        $(this).parents('dd').toggleClass('active');
+    $(function() {
+        var points = 10000; //最高积分数
+        var level = 2000; //用户积分数
+        var _step = level / points;
+        $('.progress-bar').css({
+            'height': _step * 100 + '%',
+            'background-color': '#e65460'
+        });
+        console.log(_step);
+        if (_step > 0) {
+            $('.step3').addClass('light');
+        }
+        if (_step > (1 / 2)) {
+            $('.step2').addClass('light');
+        }
+        if (_step == 1) {
+            $('.step1').addClass('light');
+        }
+
+        var part2 = new Swiper('.part2', {
+            slidesPerView: 'auto',
+            spaceBetween: 20
+        });
+        var part3 = new Swiper('.part3', {
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
     });
 
-    //二维码弹框
-    $('#qrCode').on('click', function() {
-        layerShow($('#layer-qrcode'));
-    });
-
-    //会员权益等级tab切换
-    $('.tab-caption>a').on('click', function(event) {
-        event.preventDefault();
-        var _color = $(this).attr('class');
-        $(this).addClass('active').siblings().removeClass('active');
-        var _index = $('.tab-caption>a').index(this);
-        $('#tab-container').removeClass().addClass('bg-'+_color);
-        $('.tab-content').eq(_index).addClass('active').siblings().removeClass('active');
+    //展开列表
+    $(document).on('click','.expand',function(){
+        var $this = $(this);
+        $this[$this.hasClass('active') ? 'removeClass' : 'addClass']('active');
     });
     </script>
 </body>

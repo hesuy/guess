@@ -1,140 +1,153 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="format-detection" content="telephone=no">
-<title>绑定</title>
-<meta name="description" content="GUESS">
-<meta name="keywords" content="GUESS">
-<link rel="stylesheet" href="../css/main.min.css">
-<script>
-	var deviceWidth = document.documentElement.clientWidth;
-	deviceWidth = deviceWidth >750 ? 750 : deviceWidth;
-	document.documentElement.style.fontSize = deviceWidth/7.5 +'px';
-</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>绑定</title>
+    <meta name="description" content="GUESS">
+    <meta name="keywords" content="GUESS">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <script>
+    var deviceWidth = document.documentElement.clientWidth;
+    deviceWidth = deviceWidth > 750 ? 750 : deviceWidth;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    </script>
 </head>
+
 <body>
-	<section id="binding" class="container">
-		<div class="form-content">
-			<form id="myForm" class="forms" action="">
-				<div class="form-group">
-					<label><i class="icon icon-mobile"></i></label>
-					<div class="form-control">
-						<input id="mobile" type="tel" class="form-input error" value="" placeholder="请输入联系电话（必填）" maxlength="11" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<label><i class="icon icon-key"></i></label>
-					<div class="form-control flex-row">
-						<input id="code" type="text" class="form-input" value="" placeholder="请输入验证码（必填）" required>
-						<button class="btn-code">获取验证码</button>
-					</div>
-				</div>
-				<div class="form-group">
-					<label><i class="icon icon-cake"></i></label>
-					<div class="form-control">
-						<input id="birthday" type="date" class="form-input" value="">
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="flex-row pr10">
-						<label><i id="icon-sex" class="icon icon-boy"></i></label>
-						<div class="form-control">
-							<span class="control-select">
-								<select name="" id="sex">
-									<option value="">性别（必填）</option>
-									<option value="男">男</option>
-									<option value="女">女</option>
-								</select>
-							</span>
-						</div>
-					</div>
-					<div class="flex-row">
-						<label><i class="icon icon-lang"></i></label>
-						<div class="form-control">
-							<span class="control-select">
-								<select name="" id="">
-									<option value="">语言</option>
-								</select>
-							</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label class="align-self"><input type="checkbox" class="form-checkbox" name=""></label>
-					<span class="small">我已阅读<a href="javascript:;" class="layer-items red underline">服务条款</a>并遵守相关条款。同意接受GUESS的最新资讯和优惠活动。</span>
-				</div>
-				<div class="form-submit text-right">
-					<a href="javascript:void(0);" id="btn-binding" class="btn btn-binding">绑定</a>
-				</div>
-			</form>
-		</div>
-	</section>
-	<div id="layer">
-		<div id="layer-wrap">
-			<div id="layer-content"></div>
-		</div>
-	</div>
-	<!-- 信息有误 -->
-	<script id="error-msg" type="text/template">
-		<div class="layer-content notice">
-			<p class="text-center m20">对不起，您输入的验证码有误<br/>请重新输入！</p>
-			<div class="text-center mt20">
-			<a href="javascript:;" class="btn btn-save layer-close"></a>
-			</div>
-		</div>
-	</script>
-	<!-- 信息不完整 -->
-	<script id="error-msg2" type="text/template">
-		<div class="layer-content notice">
-			<p class="text-center m20">对不起，您填写的信息尚未完整，<br/>请填写完整后再提交。</p>
-			<div class="text-center mt20">
-			<a href="javascript:;" class="btn btn-save layer-close"></a>
-			</div>
-		</div>
-	</script>
-	<!-- 会员条款 -->
-	<script id="service-items" type="text/template">
-		<div class="layer-content">
-			<span class="close"></span>
-			<div class="items">
-				<div class="items-title">会员条款</div>
-				<p>本服务条款（下称“使用条款”）适用于您对GUESS会员中心的访问和使用。我们还制定了“隐私保护政策”以及适用于本网站上各种活动的其它条款、法律声明及条件，包括可能适用于购买产品或服务及本网站特定部分或功能（如竞赛、促销或其它类似功能）的条款与条件，前述所有条款与条件均已通过引用的方式纳入本使用条款中，而且应与使用条款一同构成GUESS（“我们”、“我们的”及与此相关的任何类似表述）与您之间的一份契约（下称“条款”）。根据本条款, 我们将依法收集、处理、利用、国际传输您的个人资料,您亦将收到GUESS品牌的营销信息。<br/>
-				机时公司及其关联方和相关法人团体</p>
-				<dl>
-					<dd>1. 接受使用条款及其它条款</dd>
-					<dd>2. 隐私保护政策</dd>
-					<dd>3. 居住国</dd>
-					<dd>4. 网站、内容及商标的所有权</dd>
-					<dd>5. 您对网站的使用</dd>
-					<dd>6. 用户通信及用户内容</dd>
-					<dd>7. 用户生成内容规则</dd>
-					<dd>8. 账号、密码及安全</dd>
-					<dd>9. 产品</dd>
-					<dd>10. 通往本网站的链接；本网站上的第三方链接</dd>
-					<dd>11. 网站与内容的变更</dd>
-					<dd>12. 第三方商业合作伙伴</dd>
-					<dd>13. 免责声明；责任限制；损害赔偿</dd>
-					<dd>14. 管辖法律；效力瑕疵；弃权；效力存续；纠纷解决</dd>
-					<dd>15. 条款终止</dd>
-					<dd>16. 其它协助</dd>
-				</dl>
-			</div>
-		</div>
-	</script>
-	<script src="../libs/jquery.min.js"></script>
-	<script src="../js/main.min.js"></script>
-	<script>
-	//服务条款
-	$('.layer-items').on('click',function(){
-		 layerShow($('#service-items'));
-	});
-	$('#btn-binding').on('click', function(event) {
-		layerShow($('#error-msg'));
-	});
-	</script>
+    <section class="container bg-1">
+        <div class="wrapper flex-end">
+            <div class="logo"><img src="../images/logo.png"></div>
+            <div class="form-title"><img src="../images/guess-list.png"></div>
+            <div class="form-content">
+                <form id="myForm" class="forms" action="">
+                    <div class="form-group">
+                        <label><i class="icon icon-mobile"></i></label>
+                        <div class="form-control">
+                            <input id="mobile" type="tel" class="form-input error" value="" placeholder="请输入联系电话（必填）" maxlength="11" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="icon icon-key"></i></label>
+                        <div class="form-control">
+                            <input id="code" type="text" class="form-input" value="" placeholder="请输入验证码（必填）" required>
+                            <button id="btn-code" class="btn btn-code">获取验证码</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="icon icon-cake"></i></label>
+                        <div class="form-control">
+                            <input id="birthday" type="date" class="form-input" value="" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><i id="icon-sex" class="icon icon-sex"></i></label>
+                        <div class="form-control flex">
+                            <span class="spn-radio left-radius checked">
+                                <input type="radio" class="form-radio" name="sex" value="男" checked="checked" />
+                                男
+                            </span>
+                            <span class="spn-radio right-radius">
+                                <input type="radio" class="form-radio" name="sex" value="女" />
+                                女
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input id="checkbox" type="checkbox" class="form-checkbox" value="1" name="">
+                        </label>
+                        <span class="small">我已阅读<a href="javascript:;" class="layer-items red underline">服务条款</a>并遵守相关条款，同意接受来自GUESS的最新资讯和优惠活动。</span>
+                    </div>
+                    <div class="form-submit text-center">
+                        <button id="btn-binding" class="btn btn-half" disabled="">绑定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- 会员条款 -->
+    <script id="service-items" type="text/template">
+        <div class="items">
+            <div class="items-title">服务条款</div>
+            <p>本服务条款（下称“使用条款”）适用于您对GUESS会员中心的访问和使用。我们还制定了“隐私保护政策”以及适用于本网站上各种活动的其它条款、法律声明及条件，包括可能适用于购买产品或服务及本网站特定部分或功能（如竞赛、促销或其它类似功能）的条款与条件。前述所有条款与条件均已通过引用的方式纳入本使用条款中，并且应与使用条款一同构成机时商贸（上海）有限公司（“我们”、“我们的”及与此相关的任何类似表述）与您之间的一份契约（下称“条款”）。根据本条款, 我们将依法收集、处理、利用、国际传输您的个人资料,您亦将收到机时公司旗下品牌的营销信息。
+                <br/> 机时公司及其关联方和相关法人团体:
+            </p>
+            <dl>
+                <dd>1. 接受使用条款及其它条款</dd>
+                <dd>2. 隐私保护政策</dd>
+                <dd>3. 居住国</dd>
+                <dd>4. 网站、内容及商标的所有权</dd>
+                <dd>5. 您对网站的使用</dd>
+                <dd>6. 用户通信及用户内容</dd>
+                <dd>7. 用户生成内容规则</dd>
+                <dd>8. 账号、密码及安全</dd>
+                <dd>9. 产品</dd>
+                <dd>10. 通往本网站的链接；本网站上的第三方链接</dd>
+                <dd>11. 网站与内容的变更</dd>
+                <dd>12. 第三方商业合作伙伴</dd>
+                <dd>13. 免责声明；责任限制；损害赔偿</dd>
+                <dd>14. 管辖法律；效力瑕疵；弃权；效力存续；纠纷解决</dd>
+                <dd>15. 条款终止</dd>
+                <dd>16. 其它协助</dd>
+            </dl>
+        </div>
+    </script>
+    <script src="../libs/zepto.min.js"></script>
+    <script src="../js/main.min.js"></script>
+    <script>
+    //获取验证码
+    $('#btn-code').on('click', function(event) {
+        var $btn = $('#btn-code');
+        if ($(this).attr('disabled', false)) {
+            $(this).attr('disabled', true);
+        }
+        var count = 0;
+        var time = 60;
+        var countDown = setInterval(function() {
+            time--;
+            $btn.html(time + 's').addClass('btn-code-disabled');
+            if (time == 0) {
+                time = 60;
+                $btn.attr('disabled', false).html('获取验证码').removeClass('btn-code-disabled');
+                clearInterval(countDown);
+            }
+        }, 1000);
+    });
+
+    //服务条款
+    $('.layer-items').on('click', function() {
+        layerShow($('#service-items'));
+    });
+
+    //验证
+    $('#checkbox').change(function(event) {
+        var _checked = $('input[id="checkbox"]:checked').val();
+        if (_checked == '1') {
+            $('#btn-binding').attr('disabled', false).addClass('btn-abled');
+        } else {
+            $('#btn-binding').attr('disabled', true).removeClass('btn-abled');
+        }
+    });
+
+    //提交
+    $('#btn-binding').on('click', function(event) {
+        var $required = $('input[required]');
+        $required.each(function(index, el) {
+            if ($(this).val().length <= 0) {
+                $(this).addClass('error');
+            }
+
+            //填写信息有误
+            layerShow($('#error-msg'));
+
+        });
+    });
+    </script>
 </body>
+
 </html>
